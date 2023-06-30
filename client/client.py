@@ -1,5 +1,4 @@
 import requests
-import user
 
 class TaskClient:
     BASE_URL = "http://127.0.0.1:8000/tasks/"
@@ -20,8 +19,3 @@ class TaskClient:
         return requests.delete(f"{TaskClient.BASE_URL}{task_id}").json()
 
 client = TaskClient()
-
-# client.create_task(id=22, title="Walk the dog", completed=False)
-# print(client.get_all_tasks())
-# print(client.update_task(20, id=20, title="Walk the dog again", completed=False))
-# print(client.delete_task(19))
